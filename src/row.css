@@ -1,5 +1,3 @@
-.row_poster_parent {
-}
 .row_posters {
   display: flex;
   overflow-y: hidden;
@@ -14,7 +12,7 @@
 .row_poster {
   width: 100%;
   object-fit: contain;
-  max-height: 100px;
+  max-height: 10px;
   transition: transform 450ms;
   cursor: pointer;
   margin: 0 10px;
