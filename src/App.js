@@ -6,6 +6,7 @@ import Header from "./Header"
 import Banner from "./Banner"
 import SearchForm from "./SearchForm"
 import Row from "./Row"
+import Footer from "./Footer"
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,8 @@ function App() {
       <Row title="Romance" imageBase={request.images} url={request.romance} />
       <Row title="Actions" imageBase={request.images} url={request.actions} />
       <Row title="Documentaries" imageBase={request.images} url={request.documentaries} />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

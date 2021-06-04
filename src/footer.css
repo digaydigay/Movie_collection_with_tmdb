@@ -1,0 +1,17 @@
+.footer {
+  background: black;
+  height: 80px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  color: blue;
+}
