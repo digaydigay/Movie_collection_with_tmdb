@@ -1,0 +1,29 @@
+.search_form-container {
+  height: 50px;
+  padding: 0 20px;
+}
+.search_form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 20px;
+}
+.search_form input {
+  height: 30px;
+  padding: 0 10px;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(122, 122, 122);
+  border-radius: 2px;
+}
+.search_form button {
+  height: 30px;
+  padding: 5px 10px;
+  background: blue;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
