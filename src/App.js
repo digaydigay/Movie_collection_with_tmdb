@@ -1,7 +1,7 @@
 import './App.css';
 import request from "./request"
 
-// Components
+// Components 
 import Header from "./Header"
 import Banner from "./Banner"
 import SearchForm from "./SearchForm"
