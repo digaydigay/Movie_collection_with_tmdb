@@ -15,7 +15,7 @@ function App() {
       {/* Header */}
       <Header />
       {/* Banner */}
-      <Banner baseUrl={request.baseUrl} imageBase={request.images} />
+      <Banner baseUrl={request.baseUrl} url={request.mostPopular} imageBase={request.images} />
       {/* Search Form */}
       <SearchForm imageBase={request.images} />
       {/* Rows */}
