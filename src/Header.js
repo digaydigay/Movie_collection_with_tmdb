@@ -10,8 +10,6 @@ export default function Header() {
   return (
     <div className={header ? "header headershow" : "header"}>
       <h3>Dgy Movie</h3>
-
-      <h4>About</h4>
     </div>
   )
 }

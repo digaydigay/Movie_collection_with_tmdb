@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import axios from "./axios"
+import axios from "axios"
 import "./banner.css"
 
-export default function Banner({ url, imageBase }) {
+export default function Banner({ baseUrl, url, imageBase }) {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(url)
+      const request = await axios.get(`${baseUrl}${url}`)
       setMovies(request.data.results[
         Math.floor(Math.random() * request.data.results.length - 1)
       ])
     }
+
     fetchData()
   }, [url])
-  console.log(movies)
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str

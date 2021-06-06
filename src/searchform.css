@@ -1,5 +1,5 @@
-.search_form-container {
-  height: 50px;
+.search_-container {
+  min-height: 50px;
   padding: 0 20px;
 }
 .search_form {
@@ -27,4 +27,39 @@
   margin-left: 10px;
   border-radius: 10px;
   cursor: pointer;
+}
+.column_search_result {
+  max-width: 100vw;
+  max-height: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.search_result_title {
+  margin: 20px;
+}
+.column_search_image {
+  max-height: 150px;
+  margin-right: 20px;
+  height: 100%;
+}
+.movie_info {
+  flex: 1;
+}
+.movie_title {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.movie_description {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+  .column_search_result {
+    flex-direction: column;
+  }
+  .movie_title {
+    text-align: center;
+    font-size: 20px;
+  }
 }
