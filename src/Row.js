@@ -16,7 +16,7 @@ export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) 
       return request
     }
     fetchData()
-  }, [`${baseUrl}${url}`])
+  }, [baseUrl, url])
 
 
   return (
@@ -25,7 +25,7 @@ export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) 
       <div className="row_posters">
         {
           movies.map((movie, key) => {
-            if (movie.poster_path == undefined) return ""
+            if (movie.poster_path === undefined) return ""
             return <img key={key}
               className={`row_poster ${isLargePosters && "row_large_poster"}`}
               src={`${imageBase}${isLargePosters ? movie.poster_path : movie.backdrop_path}`}
