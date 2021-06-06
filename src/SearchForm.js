@@ -39,6 +39,7 @@ export default function SearchForm({ imageBase }) {
               <p className="movie_description"> {truncate(movie.overview, 200)}</p>
             </div>
           </div>
+          return
         })
       }
 
