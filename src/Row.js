@@ -14,7 +14,7 @@ export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) 
       return request
     }
     fetchData()
-  }, [])
+  }, [`${baseUrl}${url}`])
 
 
   return (
