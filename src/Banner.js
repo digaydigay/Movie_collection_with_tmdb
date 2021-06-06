@@ -15,7 +15,7 @@ export default function Banner({ baseUrl, url, imageBase }) {
     }
     fetchData()
 
-  }, [url])
+  }, [`${baseUrl}${url}`])
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str
