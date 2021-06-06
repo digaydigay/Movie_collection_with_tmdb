@@ -8,16 +8,15 @@ import axios from "axios"
 export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) {
   const [movies, setMovies] = useState([])
 
+  console.log(movies)
   useEffect(() => {
-
     async function fetchData() {
       const request = await axios.get(`${baseUrl}${url}`)
       setMovies(request.data.results)
       return request
     }
     fetchData()
-
-  }, [])
+  }, [url])
 
 
   return (
@@ -26,8 +25,8 @@ export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) 
       <div className="row_posters">
         {
           movies.map((movie, key) => {
-            if (movie.poster_path === undefined) return null
-            return <img key={key}
+            if (movie.poster_path == undefined) return ""
+            return <img key={key} onClick={() => onPlay(movie)}
               className={`row_poster ${isLargePosters && "row_large_poster"}`}
               src={`${imageBase}${isLargePosters ? movie.poster_path : movie.backdrop_path}`}
               alt={movie.name || movie.title} />
@@ -35,7 +34,6 @@ export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) 
           })
         }
       </div>
-
     </div>
   )
 }
