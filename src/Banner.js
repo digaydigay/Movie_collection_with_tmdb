@@ -33,7 +33,7 @@ export default function Banner({ baseUrl, url, imageBase }) {
       >
         <div className="banner_contents">
           {/* Banner Title */}
-          <h1 className="banner_title">{movies.name}</h1>
+          <h1 className="banner_title">{movies.name || movies.title}</h1>
           {/* Action Btn */}
           <button className="banner_button">Play</button>
           <button className="banner_button">My chat</button>
