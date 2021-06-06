@@ -1,7 +1,7 @@
 import './App.css';
 import request from "./request"
 
-// Components 
+// Components
 import Header from "./Header"
 import Banner from "./Banner"
 import SearchForm from "./SearchForm"
@@ -15,7 +15,7 @@ function App() {
       {/* Header */}
       <Header />
       {/* Banner */}
-      <Banner url={request.mostPopular} imageBase={request.images} />
+      <Banner baseUrl={request.baseUrl} imageBase={request.images} />
       {/* Search Form */}
       <SearchForm imageBase={request.images} />
       {/* Rows */}

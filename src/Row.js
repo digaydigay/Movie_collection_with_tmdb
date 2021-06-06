@@ -5,7 +5,7 @@ import axios from "axios"
 
 
 
-export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) {
+export default function Row({ title, baseUrl, isLargePosters, imageBase }) {
   const [movies, setMovies] = useState([])
   useEffect(() => {
     async function fetchData() {
