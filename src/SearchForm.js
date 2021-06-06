@@ -33,7 +33,8 @@ export default function SearchForm({ imageBase }) {
 
       {
         searchMovie.map((movie, index) => {
-          if (movie.backdrop_path != null) return <div key={index} className="column_search_result" >
+          if (movie.backdrop_path === null) return null
+          return <div key={index} className="column_search_result" >
             <img className="column_search_image" src={`${imageBase}${movie.backdrop_path}`} alt={movie.name || movie.title} />
             <div className="movie_info">
               <h1 className="movie_title">{movie.name || movie.title}</h1>

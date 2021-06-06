@@ -25,7 +25,8 @@ export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) 
       <div className="row_posters">
         {
           movies.map((movie, key) => {
-            if (movie.poster_path !== null) return <img key={key}
+            if (movie.poster_path === null) return null
+            return <img key={key}
               className={`row_poster ${isLargePosters && "row_large_poster"}`}
               src={`${imageBase}${isLargePosters ? movie.poster_path : movie.backdrop_path}`}
               alt={movie.name || movie.title} />
