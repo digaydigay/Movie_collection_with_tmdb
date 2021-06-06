@@ -15,9 +15,9 @@ function App() {
       {/* Header */}
       <Header />
       {/* Banner */}
-      <Banner baseUrl={request.baseUrl} url={request.mostPopular} imageBase={request.images} />
+      <Banner url={request.mostPopular} imageBase={request.images} />
       {/* Search Form */}
-      <SearchForm allMovie={request.allMovie} imageBase={request.images} />
+      <SearchForm imageBase={request.images} />
       {/* Rows */}
       <Row title="Most Popular" imageBase={request.images} baseUrl={request.baseUrl} url={request.mostPopular} isLargePosters />
       <Row title="Trending Now" imageBase={request.images} baseUrl={request.baseUrl} url={request.trending} />
