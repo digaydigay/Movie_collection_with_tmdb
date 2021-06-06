@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./row.css"
 import axios from "axios"
 
@@ -8,13 +8,16 @@ import axios from "axios"
 export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) {
   const [movies, setMovies] = useState([])
 
-  async function fetchData() {
-    const request = await axios.get(`${baseUrl}${url}`)
-    setMovies(request.data.results)
-    return request
-  }
-  fetchData()
+  useEffect(() => {
 
+    async function fetchData() {
+      const request = await axios.get(`${baseUrl}${url}`)
+      setMovies(request.data.results)
+      return request
+    }
+    fetchData()
+
+  }, [])
 
 
   return (
