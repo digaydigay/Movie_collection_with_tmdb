@@ -7,14 +7,14 @@ import axios from "axios"
 
 export default function Row({ title, baseUrl, url, isLargePosters, imageBase }) {
   const [movies, setMovies] = useState([])
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(`${baseUrl}${url}`)
-      setMovies(request.data.results)
-      return request
-    }
-    fetchData()
-  }, [`${baseUrl}${url}`])
+
+  async function fetchData() {
+    const request = await axios.get(`${baseUrl}${url}`)
+    setMovies(request.data.results)
+    return request
+  }
+  fetchData()
+
 
 
   return (
