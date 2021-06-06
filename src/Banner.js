@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import "./banner.css"
 
-export default function Banner({ baseUrl, imageBase }) {
+export default function Banner({ baseUrl, url, imageBase }) {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
