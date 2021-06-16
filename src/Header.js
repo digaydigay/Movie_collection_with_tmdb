@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <div className={header ? "header headershow" : "header"}>
-      <h3>Dgy Movie</h3>
+      <h3>Digay Movie Collection</h3>
     </div>
   )
 }

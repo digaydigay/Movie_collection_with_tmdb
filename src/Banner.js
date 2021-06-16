@@ -35,8 +35,7 @@ export default function Banner({ baseUrl, url, imageBase }) {
           {/* Banner Title */}
           <h1 className="banner_title">{movies.name || movies.title}</h1>
           {/* Action Btn */}
-          <button className="banner_button">Play</button>
-          <button className="banner_button">My chat</button>
+          <button className="banner_button">Show Details</button>
           {/* Description */}
           <h1 className="banner_description">{truncate(movies?.overview, 180)}</h1>
         </div>
