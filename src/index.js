@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import "bootstrap/dist/css/bootstrap.min.css"
+import { MovieProvider } from "./MovieContext/movieContext"
 
 ReactDOM.render(
-  <React.StrictMode>
+  <MovieProvider>
     <App />
-  </React.StrictMode>,
+  </MovieProvider>,
   document.getElementById('root')
 );
 

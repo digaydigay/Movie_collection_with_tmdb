@@ -1,0 +1,15 @@
+.movie_details_main {
+  min-height: 100vh;
+  padding: 50px 20px;
+  border: 1px solid rgb(161, 6, 6);
+}
+.movie_details {
+  height: 500px;
+  border: 1px solid rgb(161, 6, 6);
+
+  display: flex;
+}
+.movie_details_poster img {
+  max-height: 500px;
+  margin-right: 20px;
+}
