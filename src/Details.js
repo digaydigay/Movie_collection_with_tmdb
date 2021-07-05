@@ -10,8 +10,8 @@ export default function Details() {
   const { movieDetails } = useMovie()
   const [loading, setLoading] = useState(true)
   const [trailerKeyv1, setTrailerv1] = useState()
-  let trailerKeyv2 = sessionStorage.getItem("trailer")
-  let details = JSON.parse(sessionStorage.getItem("details"))
+  let trailerKeyv2 = localStorage.getItem("trailer")
+  let details = JSON.parse(localStorage.getItem("details"))
   const history = useHistory()
 
   useEffect(() => {
@@ -19,18 +19,15 @@ export default function Details() {
       const trailer = await axios.get(`https://api.themoviedb.org/3/movie/${movieDetails.id}/videos?api_key=24e3fa79c3d9ef3de668bd674f99bc15&language=en-US`)
       const key = await trailer.data.results
       setLoading(false)
-      sessionStorage.setItem("details", JSON.stringify(movieDetails, null, 2))
+      localStorage.setItem("details", JSON.stringify(movieDetails, null, 2))
       if (key[0] === undefined) return null
       setTrailerv1(key[0].key)
-      sessionStorage.setItem("trailer", key[0].key)
+      localStorage.setItem("trailer", key[0].key)
       return trailer
     }
     setLoading(false)
     trailer()
   }, [movieDetails])
-
-
-  console.log(details.id)
 
   return (
     <>
