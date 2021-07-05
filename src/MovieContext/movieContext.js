@@ -8,7 +8,7 @@ export const useMovie = () => {
 export function MovieProvider({ children }) {
   const [movieDetails, setMovieDetails] = useState([])
   return (
-    <Movie.Provider value={{ movieDetails, setMovieDetails}}>
+    <Movie.Provider value={{ movieDetails, setMovieDetails }}>
       {children}
     </Movie.Provider>
 

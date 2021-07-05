@@ -5,6 +5,7 @@
   padding: 20px 0;
   margin-left: 10px;
   min-height: 350px;
+  position: relative;
 }
 .row_posters::-webkit-scrollbar {
   display: none;
@@ -21,10 +22,11 @@
 .row_poster > img {
   max-height: 300px;
   object-fit: contain;
+  border-radius: 10px;
 }
 
 .row_poster:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .row_title {
@@ -32,4 +34,14 @@
   position: relative;
   padding: 0 5px;
   display: inline-block;
+}
+.row_posters .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: maroon;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
 }

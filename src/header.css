@@ -9,12 +9,23 @@
   padding: 0 20px;
   height: 50px;
   width: 100%;
+  background: rgb(128, 0, 0, 0.8);
+
+  backdrop-filter: blur(20px);
 }
-.header h3 {
-  color: teal;
+.header h5 {
+  color: rgb(255, 255, 255);
   font-weight: 800;
+  text-shadow: 0 0 3px 2px black;
+  background: none;
+}
+.header .black {
+  color: black;
 }
 .headershow {
-  background: black;
   box-shadow: 0 1px 2px 1px white;
+}
+.header .moon {
+  background: #333;
+  color: white;
 }

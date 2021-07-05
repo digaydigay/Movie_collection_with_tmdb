@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import request from "./request"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
@@ -10,11 +11,10 @@ import Row from "./Row"
 import Footer from "./Footer"
 import Details from "./Details"
 function App() {
-
+  const [dark, setDark] = useState(false)
   return (
-    <div className="App">
-
-      <Header />
+    <div className={!dark ? "App" : "app_dark"}>
+      <Header dark={dark} setDark={setDark} />
       <Router>
         <Switch>
           <Route path="/details" component={Details} />
@@ -33,7 +33,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
     </div>
   );
 }

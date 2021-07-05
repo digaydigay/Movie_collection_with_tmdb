@@ -17,16 +17,23 @@
   border-bottom: 1px solid rgb(122, 122, 122);
   border-radius: 2px;
   font-size: initial;
+  color: gray;
 }
 .search_form button {
-  height: 30px;
+  width: 100px;
   padding: 5px 20px;
-  background: teal;
-  color: white;
   border: none;
   margin-left: 10px;
   border-radius: 10px;
   cursor: pointer;
+  background: maroon;
+  color: white;
+}
+.search_form button:hover {
+  transform: scale(0.9);
+}
+.search_form button:active {
+  transform: scale(1);
 }
 .column_search_result {
   max-width: 100vw;
@@ -34,6 +41,14 @@
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  padding: 5px;
+}
+.column_search_result:hover {
+  background: maroon;
+  color: white;
+  cursor: pointer;
+  transform: scale(0.99);
+  transition: all ease-in 300ms;
 }
 .search_result_title {
   margin: 20px;
